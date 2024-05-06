@@ -10,7 +10,7 @@ import UIKit
 
 /*
  */
-open class MessageView: BaseView, Identifiable, AccessibleMessage, HapticMessage {
+open class MessageView: SMBaseView, Identifiable, AccessibleMessage, HapticMessage {
 
     /*
      MARK: - Haptic feedback

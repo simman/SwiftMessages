@@ -14,7 +14,7 @@ import UIKit
  of the optional SwiftMessages protocols and provides some convenience functions
  and a configurable tap handler. Message views do not need to inherit from `BaseVew`.
  */
-open class BaseView: UIView, BackgroundViewable, MarginAdjustable {
+open class SMBaseView: UIView, BackgroundViewable, MarginAdjustable {
 
     /*
      MARK: - IB outlets
@@ -155,7 +155,7 @@ open class BaseView: UIView, BackgroundViewable, MarginAdjustable {
     /**
      An optional tap handler that will be called when the `backgroundView` is tapped.
      */
-    open var tapHandler: ((_ view: BaseView) -> Void)? {
+    open var tapHandler: ((_ view: SMBaseView) -> Void)? {
         didSet {
             installTapRecognizer()
         }
@@ -291,7 +291,7 @@ open class BaseView: UIView, BackgroundViewable, MarginAdjustable {
  MARK: - Theming
  */
 
-extension BaseView {
+extension SMBaseView {
 
     /// A convenience function to configure a default drop shadow effect.
     /// The shadow is to this view's layer instead of that of the background view
@@ -349,7 +349,7 @@ extension BaseView {
  if these don't exactly meet your needs.
  */
 
-extension BaseView {
+extension SMBaseView {
 
     /**
      A shortcut for configuring the left and right layout margins. For views that
